@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{%extends 'Userdetail/base.html'%}
+{%block body_block%}
+{{uname}}
+{% if request.user.is_authenticated %}
+    <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
+{% else %}
+    <p>Welcome, new user. Please log in.</p>
+{% endif %}
+
+
+<table class="table table-striped table-dark">
+
+<tr></tr>
+
+
+    </table>
+
+
+{%endblock%}

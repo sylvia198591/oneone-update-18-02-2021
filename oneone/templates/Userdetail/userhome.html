@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{%extends 'Userdetail/base.html'%}
+{%block body_block%}
+
+<!-- home.html -->
+
+    <h2>Home</h2>
+    {% if user.is_authenticated %}
+    <p>You are welcome on Home Page</p>
+    <p>Your name is - {{user.first_name}} {{user.last_name}}</p>
+    <p>Your email is - {{user.email}}</p>
+    <br><br>
+    <a href="{% url 'userlogout' %}">Logout</a>
+    {% else %}
+    <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+
+
+{%endblock%}

@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+{%extends 'Userdetail/base.html'%}
+{%block body_block%}
+
+{% csrf_token %}
+
+<table><tr><td><a class="dropdown-item" href="{% url 'upd' id1 %} ">update</a></td></tr></table>
+
+{%endblock%}
