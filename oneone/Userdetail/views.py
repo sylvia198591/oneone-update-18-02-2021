@@ -416,6 +416,8 @@ def userHome(request):
 
 @login_required(login_url='login.html')
 def userLogout(request):
+    del request.session['username']
+    del request.session['accno']
     logout(request)
     return redirect("login.html")
 
